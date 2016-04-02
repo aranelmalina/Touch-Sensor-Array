@@ -1,0 +1,34 @@
+clc
+clear all
+close all
+
+load('ELE_place.mat');
+load('electrodedata.mat')
+% VarCell={VarName1,VarName2,VarName3,VarName4,VarName5,VarName6,VarName7,VarName8,VarName9,VarName10,VarName11,VarName12};
+% save('electrodedata.mat','VarCell')
+for i=1:length(VarName1)
+    for j=1:12
+        for k=1:length(ELE{j,1})
+            
+        CompleteGrid(ELE{j,1}(k),ELE{j,1}(k))=VarName8(i);
+    end
+    for j=1:length(ELE9_1r)
+        CompleteGrid(ELE9_1r(j),ELE9_1c(j))=VarName9(i);
+    end
+    for j=1:length(ELE6_1r)
+        CompleteGrid(ELE6_1r(j),ELE6_1c(j))=VarName6(i);
+    end
+    for j=1:length(ELE9_2r)
+        CompleteGrid(ELE9_2r(j),ELE2_1c(j))=VarName2(i);
+    end
+    
+    [ELE{8,1},ELE{8,1}]=find(CompleteGrid==2); %value doesn't matter just need index
+[ELE{9,1},ELE{9,2}]=multifind(CompleteGrid(1:31,1:30),4,5,19,20);
+[ELE{6,1},ELE{6,2}]=find(CompleteGrid==18); 
+[ELE{2,1},ELE{2,2}]=find(CompleteGrid==34); 
+    contourf(CompleteGrid,10)
+    set(gca,'YDir','reverse')
+    axis equal
+    drawnow
+    pause(0.05)
+end

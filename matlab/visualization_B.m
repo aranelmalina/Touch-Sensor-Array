@@ -9,6 +9,7 @@ figure(1)
 
 for i = 1:length(VarName1)
 %%  row 1
+tic
     
     M(2:3,7) = VarName1(i);
     M(4,6:8) = VarName1(i);
@@ -362,5 +363,5 @@ for i = 1:length(VarName1)
     axis equal
     drawnow
     pause(0.05)
-    
+    toc
 end

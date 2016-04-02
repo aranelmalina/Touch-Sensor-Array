@@ -1,26 +1,26 @@
-function [GridMake,StartVal,EndVal] = Unimaker(on1,on2,on3,on4,on5,StartVal)
+function [GridMake,StartVal,EndVal] = Unimaker(on1,on2,on3,on4,on5,name1,name2,name3,name4,name5)
     if (on1==1)
-        val1=StartVal;
+        val1=name1;
     else
         val1=0;
     end
     if (on2==1)
-        val2=StartVal+1;
+        val2=name2;
     else
         val2=0;
     end
     if (on3==1)
-        val3=StartVal+2;
+        val3=name3;
     else
         val3=0;
     end
     if (on4==1)
-        val4=StartVal+3;
+        val4=name4;
     else
         val4=0;
     end
     if (on5==1)
-        val5=StartVal+4;
+        val5=name5;
     else
         val5=0;
     end
@@ -64,6 +64,6 @@ function [GridMake,StartVal,EndVal] = Unimaker(on1,on2,on3,on4,on5,StartVal)
     GridMake(17:20,3)=val2;
     GridMake(15:20,2)=val2;
     GridMake(14:20,1)=val2;
-    
-    EndVal=StartVal+4;
+    StartVal=0;
+    EndVal=0;
 end

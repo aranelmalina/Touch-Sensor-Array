@@ -376,17 +376,13 @@ ELE{48,2}=[];
 [ELE{7,1},ELE{7,2}]=find(CompleteGrid==10); 
 [ELE{3,1},ELE{3,2}]=find(CompleteGrid==18); 
 %row 2
-[ELE{10,1},ELE{10,2}]=find(CompleteGrid==3); %value doesn't matter just need index
-[ELE{5,1},ELE{5,2}]=find(CompleteGrid==11); 
-[ELE{1,1},ELE{1,2}]=find(CompleteGrid==19); 
+[ELE{10,1},ELE{10,2}]=find(CompleteGrid==2); %value doesn't matter just need index
+[ELE{5,1},ELE{5,2}]=find(CompleteGrid==10); 
+[ELE{3,1},ELE{1,2}]=find(CompleteGrid==18); 
 %row 3
-[ELE{11,1},ELE{11,2}]=find(CompleteGrid==4); %value doesn't matter just need index
-[ELE{8,1},ELE{8,2}]=find(CompleteGrid==12); 
-[ELE{4,1},ELE{4,2}]=find(CompleteGrid==20); 
-%row 4
-[ELE{12,1},ELE{12,2}]=find(CompleteGrid==5); %value doesn't matter just need index
-[ELE{6,1},ELE{6,2}]=find(CompleteGrid==13); 
-[ELE{2,1},ELE{2,2}]=find(CompleteGrid==21); 
+[ELE{11,1},ELE{11,2}]=find(CompleteGrid==6); %value doesn't matter just need index
+[ELE{8,1},ELE{8,2}]=find(CompleteGrid==22); 
+[ELE{4,1},ELE{4,2}]=find(CompleteGrid==38); 
 
 disp('Location Transfer Complete');
 save('ELE_place.mat','ELE');
